@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Get in Touch</h1>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <ul class="flash-messages">
+                {% for category, message in messages %}
+                    <li class="{{ category }}">{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+
+    <form method="POST">
+        <label>Name:</label>
+        <input type="text" name="name" placeholder="Your name" required>
+
+        <label>Email:</label>
+        <input type="email" name="email" placeholder="Your email" required>
+
+        <label>Message:</label>
+        <textarea name="message" placeholder="Your message" required></textarea>
+
+        <button type="submit">Send Message</button>
+    </form>
+</body>
+</html>
