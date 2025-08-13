@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Hi, I'm Margi Vasveliya </h1>
+        <p>Full-Stack Developer | Python Enthusiast | Problem Solver</p>
+    </header>
+
+    <section>
+        <h2>About Me</h2>
+        <p>I love building web apps that solve real-world problems. My skills include Python, Flask, and modern frontend tools.</p>
+    </section>
+
+    <section>
+        <h2>Projects</h2>
+        <ul>
+            <li><b>Portfolio Website</b> - This very site you're looking at!</li>
+            <li><b>Data Analysis Tool</b> - Automated insights from CSV files.</li>
+            <li><b>Todo App</b> - Simple but effective productivity tool.</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p><a href="{{ url_for('contact') }}"> Contact Me</a></p>
+    </footer>
+</body>
+</html>
